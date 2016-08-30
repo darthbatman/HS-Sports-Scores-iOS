@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gQ-Of-rFb">
+                                <rect key="frame" x="54" y="253" width="213" height="62"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8B4-Ac-Ku1">
+                                <rect key="frame" x="54" y="477" width="213" height="57"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Zha-uB-2hu"/>
+                                </constraints>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XHr-Js-uZw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.66666666666666663" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8gQ-Of-rFb" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="APD-Cs-UdT"/>
+                            <constraint firstItem="8gQ-Of-rFb" firstAttribute="leading" secondItem="8B4-Ac-Ku1" secondAttribute="leading" id="NGK-K0-Rlu"/>
+                            <constraint firstItem="8gQ-Of-rFb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="233" id="V5F-2y-HQ5"/>
+                            <constraint firstItem="8gQ-Of-rFb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="38" id="VRP-0o-JqZ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8B4-Ac-Ku1" secondAttribute="bottom" constant="34" id="boc-h4-UyT"/>
+                            <constraint firstItem="8gQ-Of-rFb" firstAttribute="trailing" secondItem="8B4-Ac-Ku1" secondAttribute="trailing" id="fpd-k6-jhA"/>
+                            <constraint firstItem="8B4-Ac-Ku1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="yBy-Ef-sy4"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="getStartedButton" destination="8B4-Ac-Ku1" id="tlG-Ll-8eV"/>
+                        <segue destination="Uxd-iP-LuX" kind="presentation" identifier="toLocationSet" modalTransitionStyle="crossDissolve" id="Qb4-Q3-qoU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="492"/>
+        </scene>
+        <!--Location Set View Controller-->
+        <scene sceneID="ql5-Ay-0UW">
+            <objects>
+                <viewController id="Uxd-iP-LuX" customClass="locationSetViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UWK-K7-cnP"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZoY-K4-9Dr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u1F-Q5-sqh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZu-6k-uMl">
+                                <rect key="frame" x="92" y="57" width="136" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qwv-bS-Chg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your city/town" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3W-CX-9FO">
+                                <rect key="frame" x="16" y="111" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7k-xn-9uF">
+                                <rect key="frame" x="16" y="225" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HTP-Ra-Uvw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzD-Qp-eAB">
+                                <rect key="frame" x="137" y="163" width="49" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="citySubmit:" destination="Uxd-iP-LuX" eventType="touchUpInside" id="Zim-qy-AJj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J3W-CX-9FO" firstAttribute="trailing" secondItem="C7k-xn-9uF" secondAttribute="trailing" id="8Cx-5h-WgG"/>
+                            <constraint firstItem="HZu-6k-uMl" firstAttribute="centerX" secondItem="J3W-CX-9FO" secondAttribute="centerX" id="Byk-zW-Cuc"/>
+                            <constraint firstItem="JzD-Qp-eAB" firstAttribute="leading" secondItem="u1F-Q5-sqh" secondAttribute="leading" constant="137" id="GEG-JA-OdB"/>
+                            <constraint firstItem="C7k-xn-9uF" firstAttribute="leading" secondItem="u1F-Q5-sqh" secondAttribute="leadingMargin" id="Gxx-Wc-yU5"/>
+                            <constraint firstItem="J3W-CX-9FO" firstAttribute="trailing" secondItem="u1F-Q5-sqh" secondAttribute="trailingMargin" id="Hxy-o6-tNM"/>
+                            <constraint firstItem="HZu-6k-uMl" firstAttribute="top" secondItem="UWK-K7-cnP" secondAttribute="bottom" constant="37" id="VC1-Ua-3jB"/>
+                            <constraint firstItem="C7k-xn-9uF" firstAttribute="top" secondItem="JzD-Qp-eAB" secondAttribute="bottom" constant="32" id="YBc-xb-82U"/>
+                            <constraint firstItem="JzD-Qp-eAB" firstAttribute="top" secondItem="J3W-CX-9FO" secondAttribute="bottom" constant="22" id="Z2M-mW-GRV"/>
+                            <constraint firstItem="C7k-xn-9uF" firstAttribute="leading" secondItem="J3W-CX-9FO" secondAttribute="leading" id="eBu-cf-CpH"/>
+                            <constraint firstItem="J3W-CX-9FO" firstAttribute="top" secondItem="HZu-6k-uMl" secondAttribute="bottom" constant="33" id="vG1-KN-V0U"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="C7k-xn-9uF" id="SZD-1u-4Aq"/>
+                        <outlet property="cityTextField" destination="J3W-CX-9FO" id="Auh-IL-kBD"/>
+                        <segue destination="XkE-nG-GJ5" kind="presentation" identifier="toGetData" id="yrS-Pw-H4L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mr1-Pk-lnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="492"/>
+        </scene>
+        <!--Get Data View Controller-->
+        <scene sceneID="gFG-pF-vyo">
+            <objects>
+                <viewController id="XkE-nG-GJ5" customClass="getDataViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mjt-Rz-Hnq"/>
+                        <viewControllerLayoutGuide type="bottom" id="CVU-wC-hab"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xpM-gS-bwy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oId-2P-SVG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XkE-nG-GJ5" id="8xX-i4-C3k"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oId-2P-SVG" firstAttribute="leading" secondItem="xpM-gS-bwy" secondAttribute="leading" id="E9b-fR-NJw"/>
+                            <constraint firstItem="oId-2P-SVG" firstAttribute="top" secondItem="xpM-gS-bwy" secondAttribute="top" id="hh6-qt-RTb"/>
+                            <constraint firstItem="oId-2P-SVG" firstAttribute="bottom" secondItem="CVU-wC-hab" secondAttribute="top" id="ieJ-Zv-uAZ"/>
+                            <constraint firstAttribute="trailing" secondItem="oId-2P-SVG" secondAttribute="trailing" id="zrH-18-TNL"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="scrollView" destination="oId-2P-SVG" id="Gaf-jd-0VN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAB-GJ-mcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1270" y="492"/>
+        </scene>
+    </scenes>
+</document>
